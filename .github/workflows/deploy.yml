@@ -3,7 +3,7 @@ name: Deploy Vite React App to GitHub Pages
 on:
   push:
     branches:
-      - main # deploy when pushing to main branch
+      - main # 👈 deploy when pushing to main branch
 
 permissions:
   contents: read
@@ -20,10 +20,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # use Node 20+ for Vite
+          node-version: 20 # 👈 use Node 20+ for Vite
 
       - name: Install dependencies
         run: npm install
+        env:
+          NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
 
       - name: Build project
         run: npm run build
@@ -36,6 +38,8 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages # ✅ REQUIRED for Pages
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
