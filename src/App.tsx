@@ -23,12 +23,16 @@ import { NavLink, Routes, Route } from "react-router-dom";
 import ReduceExample from "./examples/ReduceExample";
 import UseEffectExample from "./examples/UseEffectExample";
 import MapExample from "./examples/MapExample";
+import HaikuGenerator from "./examples/HaikuGenerator";
+import Modals from "./examples/Modals";
 
 const NAV_LINKS = [
   { to: "/", label: "Home", end: true },
   { to: "/reduce", label: "Reduce Example" },
   { to: "/use-effect", label: "Use Effect Example" },
   { to: "/map", label: "Map Example" },
+  { to: "/haiku-generator", label: "Haiku Generator" },
+  { to: "/modals", label: "Modals" },
 ];
 
 function NavBar() {
@@ -174,6 +178,8 @@ function AppRoutes() {
       <Route path="/reduce" element={<ReduceExample />} />
       <Route path="/use-effect" element={<UseEffectExample />} />
       <Route path="/map" element={<MapExample />} />
+      <Route path="/haiku-generator" element={<HaikuGenerator />} />
+      <Route path="/modals" element={<Modals />} />
     </Routes>
   );
 }
