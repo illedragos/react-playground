@@ -9,7 +9,9 @@
     "prebuild": "npm run type-check",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "npx gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
