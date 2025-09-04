@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Modal, Box, Button, Fade, Backdrop } from "@mui/material";
 
 const style = {
