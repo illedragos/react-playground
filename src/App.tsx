@@ -25,6 +25,7 @@ import UseEffectExample from "./examples/UseEffectExample";
 import MapExample from "./examples/MapExample";
 import HaikuGenerator from "./examples/HaikuGenerator";
 import Modals from "./examples/Modals";
+import SeltzerFlavorGenerator from "./examples/SeltzerFlavorGenerator";
 
 const NAV_LINKS = [
   { to: "/", label: "Home", end: true },
@@ -32,6 +33,7 @@ const NAV_LINKS = [
   { to: "/use-effect", label: "Use Effect Example" },
   { to: "/map", label: "Map Example" },
   { to: "/haiku-generator", label: "Haiku Generator" },
+  { to: "/seltzer-flavor-generator", label: "Seltzer Flavor Generator" },
   { to: "/modals", label: "Modals" },
 ];
 
@@ -179,6 +181,10 @@ function AppRoutes() {
       <Route path="/use-effect" element={<UseEffectExample />} />
       <Route path="/map" element={<MapExample />} />
       <Route path="/haiku-generator" element={<HaikuGenerator />} />
+      <Route
+        path="/seltzer-flavor-generator"
+        element={<SeltzerFlavorGenerator />}
+      />
       <Route path="/modals" element={<Modals />} />
     </Routes>
   );
