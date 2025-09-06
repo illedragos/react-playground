@@ -29,6 +29,7 @@ import SeltzerFlavorGenerator from "./examples/SeltzerFlavorGenerator";
 import RocketBlast from "./examples/RocketBlast";
 import ReactIssues from "./examples/FacebookIssues";
 import TopRepositories from "./examples/TopRepositories";
+import FizzBuzz from "./examples/FizzBuzz";
 
 const NAV_LINKS = [
   { to: "/", label: "Home", end: true },
@@ -41,6 +42,7 @@ const NAV_LINKS = [
   { to: "/rocket-blast", label: "Rocket Blast" },
   { to: "/react-issues", label: "React Issues" },
   { to: "/top-repositories", label: "Top Repositories" },
+  { to: "/fizz-buzz", label: "Fizz Buzz" },
 ];
 
 function NavBar() {
@@ -195,6 +197,7 @@ function AppRoutes() {
       <Route path="/rocket-blast" element={<RocketBlast />} />
       <Route path="/react-issues" element={<ReactIssues />} />
       <Route path="/top-repositories" element={<TopRepositories />} />
+      <Route path="/fizz-buzz" element={<FizzBuzz />} />
     </Routes>
   );
 }
