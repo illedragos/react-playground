@@ -13,7 +13,6 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
 import { useTheme, useMediaQuery } from "@mui/material";
 
 // Router
@@ -48,7 +47,7 @@ const NAV_LINKS = [
 function NavBar() {
   const [open, setOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const toggleDrawer = (next: boolean) => () => setOpen(next);
 
@@ -60,21 +59,36 @@ function NavBar() {
         bgcolor: "rgba(255,255,255,0.7)",
         backdropFilter: "blur(8px)",
         borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
+        width: "100%",
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth={false} sx={{ px: { xs: 2, md: 3 } }}>
         <Toolbar disableGutters sx={{ minHeight: 64, gap: 2 }}>
           <Typography
             variant="h6"
             component="div"
-            sx={{ fontWeight: 600, color: "text.primary", mr: 2 }}
+            sx={{
+              fontWeight: 600,
+              color: "text.primary",
+              mr: 2,
+              flexShrink: 0,
+            }}
           >
             React Playground
           </Typography>
 
           {/* Desktop / tablet centered nav */}
           {!isMobile && (
-            <Box sx={{ display: "flex", gap: 1, mx: "auto" }}>
+            <Box
+              sx={{
+                display: "flex",
+                gap: 1,
+                mx: "auto",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                flex: 1,
+              }}
+            >
               {NAV_LINKS.map((link) => (
                 <Button
                   key={link.to}
@@ -86,13 +100,15 @@ function NavBar() {
                   sx={{
                     textTransform: "none",
                     color: "text.secondary",
-                    px: 2,
+                    px: 1.5,
                     py: 0.6,
                     borderRadius: 999,
                     fontWeight: 500,
-                    fontSize: 14,
+                    fontSize: { xs: 12, md: 14 },
                     transition: "all 150ms ease",
                     border: "1px solid transparent",
+                    minWidth: "auto",
+                    whiteSpace: "nowrap",
                     "&:hover": {
                       bgcolor: "action.hover",
                       color: "text.primary",
@@ -146,27 +162,8 @@ function NavBar() {
                       </ListItemButton>
                     ))}
                   </List>
-                  <Divider />
-                  <Box sx={{ p: 2 }}>
-                    <Button variant="outlined" fullWidth>
-                      New
-                    </Button>
-                  </Box>
                 </Box>
               </Drawer>
-            </Box>
-          )}
-
-          {/* Desktop auxiliary actions */}
-          {!isMobile && (
-            <Box sx={{ ml: "auto", display: "flex", gap: 1 }}>
-              <Button
-                variant="outlined"
-                size="small"
-                sx={{ textTransform: "none" }}
-              >
-                New
-              </Button>
             </Box>
           )}
         </Toolbar>
