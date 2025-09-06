@@ -27,6 +27,7 @@ import HaikuGenerator from "./examples/HaikuGenerator";
 import Modals from "./examples/Modals";
 import SeltzerFlavorGenerator from "./examples/SeltzerFlavorGenerator";
 import RocketBlast from "./examples/RocketBlast";
+import ReactIssues from "./examples/FacebookIssues";
 
 const NAV_LINKS = [
   { to: "/", label: "Home", end: true },
@@ -37,6 +38,7 @@ const NAV_LINKS = [
   { to: "/seltzer-flavor-generator", label: "Seltzer Flavor Generator" },
   { to: "/modals", label: "Modals" },
   { to: "/rocket-blast", label: "Rocket Blast" },
+  { to: "/react-issues", label: "React Issues" },
 ];
 
 function NavBar() {
@@ -188,8 +190,8 @@ function AppRoutes() {
         element={<SeltzerFlavorGenerator />}
       />
       <Route path="/modals" element={<Modals />} />
-
       <Route path="/rocket-blast" element={<RocketBlast />} />
+      <Route path="/react-issues" element={<ReactIssues />} />
     </Routes>
   );
 }
