@@ -28,6 +28,7 @@ import Modals from "./examples/Modals";
 import SeltzerFlavorGenerator from "./examples/SeltzerFlavorGenerator";
 import RocketBlast from "./examples/RocketBlast";
 import ReactIssues from "./examples/FacebookIssues";
+import TopRepositories from "./examples/TopRepositories";
 
 const NAV_LINKS = [
   { to: "/", label: "Home", end: true },
@@ -39,6 +40,7 @@ const NAV_LINKS = [
   { to: "/modals", label: "Modals" },
   { to: "/rocket-blast", label: "Rocket Blast" },
   { to: "/react-issues", label: "React Issues" },
+  { to: "/top-repositories", label: "Top Repositories" },
 ];
 
 function NavBar() {
@@ -192,6 +194,7 @@ function AppRoutes() {
       <Route path="/modals" element={<Modals />} />
       <Route path="/rocket-blast" element={<RocketBlast />} />
       <Route path="/react-issues" element={<ReactIssues />} />
+      <Route path="/top-repositories" element={<TopRepositories />} />
     </Routes>
   );
 }
