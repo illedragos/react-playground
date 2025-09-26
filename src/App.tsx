@@ -29,6 +29,7 @@ import RocketBlast from "./examples/RocketBlast";
 import ReactIssues from "./examples/FacebookIssues";
 import TopRepositories from "./examples/TopRepositories";
 import FizzBuzz from "./examples/FizzBuzz";
+import ProgressBar from "./examples/ProgressBar";
 
 const NAV_LINKS = [
   { to: "/", label: "Home", end: true },
@@ -42,6 +43,7 @@ const NAV_LINKS = [
   { to: "/react-issues", label: "React Issues" },
   { to: "/top-repositories", label: "Top Repositories" },
   { to: "/fizz-buzz", label: "Fizz Buzz" },
+  { to: "/progress-bar", label: "Progress Bar" },
 ];
 
 function NavBar() {
@@ -195,6 +197,7 @@ function AppRoutes() {
       <Route path="/react-issues" element={<ReactIssues />} />
       <Route path="/top-repositories" element={<TopRepositories />} />
       <Route path="/fizz-buzz" element={<FizzBuzz />} />
+      <Route path="/progress-bar" element={<ProgressBar />} />
     </Routes>
   );
 }
