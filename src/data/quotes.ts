@@ -38,4 +38,6 @@ And you ask, "what if I fall?"
   "It will feel a little bit more okay day by day.",
   "If your path demands you to walk through hell, walk as if you own the damn place.",
   "Even if we perish over this, it will still have been worth it.",
+  "One step at a time",
+  "Stay strong",
 ];
