@@ -30,6 +30,7 @@ import ReactIssues from "./examples/FacebookIssues";
 import TopRepositories from "./examples/TopRepositories";
 import FizzBuzz from "./examples/FizzBuzz";
 import ProgressBar from "./examples/ProgressBar";
+import MotivationalQuotes from "./examples/MotivationalQuotes";
 
 const NAV_LINKS = [
   { to: "/", label: "Home", end: true },
@@ -44,6 +45,7 @@ const NAV_LINKS = [
   { to: "/top-repositories", label: "Top Repositories" },
   { to: "/fizz-buzz", label: "Fizz Buzz" },
   { to: "/progress-bar", label: "Progress Bar" },
+  { to: "/motivational-quotes", label: "Motivational Quotes" },
 ];
 
 function NavBar() {
@@ -198,6 +200,7 @@ function AppRoutes() {
       <Route path="/top-repositories" element={<TopRepositories />} />
       <Route path="/fizz-buzz" element={<FizzBuzz />} />
       <Route path="/progress-bar" element={<ProgressBar />} />
+      <Route path="/motivational-quotes" element={<MotivationalQuotes />} />
     </Routes>
   );
 }

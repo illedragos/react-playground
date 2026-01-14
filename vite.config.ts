@@ -13,9 +13,9 @@ export default defineConfig({
         // Ensure consistent file naming for GitHub Pages
         entryFileNames: "assets/[name].[hash].js",
         chunkFileNames: "assets/[name].[hash].js",
-        assetFileNames: "assets/[name].[hash].[ext]"
-      }
-    }
+        assetFileNames: "assets/[name].[hash].[ext]",
+      },
+    },
   },
   server: {
     port: 3003,
