@@ -31,6 +31,7 @@ import TopRepositories from "./examples/TopRepositories";
 import FizzBuzz from "./examples/FizzBuzz";
 import ProgressBar from "./examples/ProgressBar";
 import MotivationalQuotes from "./examples/MotivationalQuotes";
+import UtilityWebsites from "./examples/UtilityWebsites";
 
 const NAV_LINKS = [
   { to: "/", label: "Home", end: true },
@@ -46,6 +47,7 @@ const NAV_LINKS = [
   { to: "/fizz-buzz", label: "Fizz Buzz" },
   { to: "/progress-bar", label: "Progress Bar" },
   { to: "/motivational-quotes", label: "Motivational Quotes" },
+  { to: "/utility-websites", label: "Utility Websites" },
 ];
 
 function NavBar() {
@@ -201,6 +203,7 @@ function AppRoutes() {
       <Route path="/fizz-buzz" element={<FizzBuzz />} />
       <Route path="/progress-bar" element={<ProgressBar />} />
       <Route path="/motivational-quotes" element={<MotivationalQuotes />} />
+      <Route path="/utility-websites" element={<UtilityWebsites />} />
     </Routes>
   );
 }
